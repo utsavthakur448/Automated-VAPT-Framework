@@ -356,7 +356,7 @@ class PDFReportGenerator:
         story.append(Paragraph(f'Target: {self._escape(target)}', self.styles['NexusSubtitle']))
         story.append(Paragraph(datetime.now().strftime('%d %B %Y, %H:%M:%S'), self.styles['NexusSubtitle']))
         story.append(Spacer(1, 8 * mm))
-        author_rows = [['Developed by', 'Utsav Thakur'], ['Email', 'utsavthakur448@gmail.com'], ['LinkedIn', 'https://www.linkedin.com/in/utsavthakur123'], ['GitHub', 'https://www.linkedin.com/in/utsavthakur123']]
+        author_rows = [['Developed by', 'Utsav Thakur'], ['Email', 'utsavthakur448@gmail.com'], ['LinkedIn', 'https://www.linkedin.com/in/utsavthakur123'], ['GitHub', 'https://github.com/utsavthakur448']]
         author_table = self._info_table(author_rows, label_width=40 * mm)
         story.append(author_table)
         story.append(Spacer(1, 10 * mm))
