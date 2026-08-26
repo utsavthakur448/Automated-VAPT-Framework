@@ -369,8 +369,8 @@ Automated-VAPT-Framework/
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/hariomsingh045/NEXUS-VAPT.git
-cd NEXUS-VAPT
+git clone https://github.com/utsavthakur448/Automated-VAPT-Framework.git
+cd Automated-VAPT-Framework
 ```
 
 ## 2. Create a virtual environment
@@ -642,6 +642,7 @@ VULNSCOPE can generate structured security assessment reports containing:
 - Methodology
 - Conclusion
 
+---
 
 # 🔐 Security Philosophy
 
