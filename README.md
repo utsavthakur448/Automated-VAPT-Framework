@@ -205,7 +205,7 @@ Logging includes events such as:
 # 🏗️ Architecture
 
 ```text
-                   Automated VAPT FRAMEWORK
+                   Automated VAPT Framework
                               │
                               ▼
                      ┌─────────────────┐
@@ -642,28 +642,6 @@ VULNSCOPE can generate structured security assessment reports containing:
 - Methodology
 - Conclusion
 
-### 📥 View Sample Report
-
-A sanitized sample report generated from an authorized laboratory assessment:
-
-👉 **[View / Download VULNSCOPE Sample PDF Report](docs/sample-pdf-report/VULNSCOPE-Sample-Report.pdf)**
-
-> ⚠️ The published sample contains sanitized laboratory data. Never publish credentials, tokens, private IP information, or other sensitive assessment data.
----
-
-# 🖥️ Screenshots
-
-Screenshots can be added here to demonstrate the framework running in a controlled laboratory environment.
-
-Recommended screenshots:
-
-![Screenshot](docs/sample-screenshots/Screenshot_2026-08-26_02_59_12.png)
-![Screenshot](docs/screenshots/Screenshot%20From%202026-08-24%2006-54-28.png)
-![Screenshot](docs/screenshots/Screenshot%20From%202026-08-24%2006-55-40.png)
-![Screenshot](docs/screenshots/Screenshot%20From%202026-08-24%2006-56-16.png)
-![Screenshot](docs/screenshots/Screenshot%20From%202026-08-24%2006-56-39.png)
-![Screenshot](docs/screenshots/Screenshot%20From%202026-08-24%2006-57-05.png)
-
 
 # 🔐 Security Philosophy
 
@@ -763,7 +741,7 @@ This project was developed to explore practical cybersecurity concepts including
 
 # 👨‍💻 Author
 
-## Hariom Singh
+## Utsav Thakur
 
 **Cybersecurity / VAPT Project**
 - Email id: utsavthakur448@gmail.com
