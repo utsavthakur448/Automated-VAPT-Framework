@@ -102,7 +102,7 @@ def scan(
     # INITIALIZATION
     # ==================================================
 
-    console.print("[*] Initializing NEXUS-VAPT framework...")
+    console.print("[*] Initializing VULNSCOPE framework...")
     console.print("[+] Configuration loaded")
     console.print("[+] Assessment engine initialized")
     console.print("[+] Vulnerability checks loaded")
@@ -251,7 +251,7 @@ def scan(
     console.print(
         end_banner_line(
             "              [bold green]"
-            "NEXUS-VAPT ASSESSMENT COMPLETED"
+            "VULNSCOPE ASSESSMENT COMPLETED"
             "[/bold green]"
         )
     )
@@ -262,10 +262,10 @@ def scan(
 
 @app.command()
 def version():
-    """Display NEXUS-VAPT version."""
+    """Display VULNSCOPE version."""
 
     config = load_config()
-    console.print(f"NEXUS-VAPT v{config['project']['version']}")
+    console.print(f"VULNSCOPE v{config['project']['version']}")
 
 
 if __name__ == "__main__":
