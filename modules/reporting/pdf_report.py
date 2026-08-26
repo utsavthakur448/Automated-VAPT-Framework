@@ -73,12 +73,12 @@ class PDFReportGenerator:
             canvas.rect(0, height - 8 * mm, width, 8 * mm, fill=1, stroke=0)
             canvas.setFillColor(colors.white)
             canvas.setFont('Helvetica-Bold', 7)
-            canvas.drawString(15 * mm, height - 5.2 * mm, 'NEXUS-VAPT | SECURITY ASSESSMENT REPORT')
+            canvas.drawString(15 * mm, height - 5.2 * mm, 'VULNSCOPE | SECURITY ASSESSMENT REPORT')
         canvas.setStrokeColor(colors.HexColor('#D1D5DB'))
         canvas.line(15 * mm, 14 * mm, width - 15 * mm, 14 * mm)
         canvas.setFillColor(colors.grey)
         canvas.setFont('Helvetica', 7)
-        canvas.drawString(15 * mm, 9 * mm, 'NEXUS-VAPT | Developed by Hariom Singh')
+        canvas.drawString(15 * mm, 9 * mm, 'VULNSCOPE | Developed by Utsav Thakur')
         canvas.drawRightString(width - 15 * mm, 9 * mm, f'Page {document.page}')
         canvas.restoreState()
 
@@ -88,7 +88,7 @@ class PDFReportGenerator:
         overall_risk = str(self._value(risk_summary, 'risk_rating', 'UNKNOWN')).upper()
         risk_score = self._value(risk_summary, 'risk_score', 0.0)
         total_findings = len(findings or [])
-        text = f'NEXUS-VAPT performed an automated vulnerability assessment against the authorized target {target}. The assessment combined network service discovery, vulnerability detection, web security checks, evidence collection, and risk prioritization.'
+        text = f'VULNSCOPE performed an automated vulnerability assessment against the authorized target {target}. The assessment combined network service discovery, vulnerability detection, web security checks, evidence collection, and risk prioritization.'
         elements.append(self._paragraph(text))
         elements.append(Spacer(1, 5 * mm))
         rows = [['Target', str(target)], ['Overall Risk', overall_risk], ['Risk Score', str(risk_score)], ['Total Findings', str(total_findings)]]
@@ -321,7 +321,7 @@ class PDFReportGenerator:
     def _methodology(self):
         elements = []
         elements.extend(self._section_header(7, 'Assessment Methodology'))
-        text = "The assessment was performed using NEXUS-VAPT's automated assessment workflow. The process included target validation, Nmap-based service discovery, service-specific vulnerability detection, CVE/CPE matching, web security checks, evidence collection, severity classification, and risk prioritization."
+        text = "The assessment was performed using VULNSCOPE's automated assessment workflow. The process included target validation, Nmap-based service discovery, service-specific vulnerability detection, CVE/CPE matching, web security checks, evidence collection, severity classification, and risk prioritization."
         elements.append(self._paragraph(text))
         elements.extend(self._section_end('Assessment Methodology'))
         return elements
@@ -344,19 +344,19 @@ class PDFReportGenerator:
     def generate(self, target, scan_result, findings, network_findings, web_findings, risk_summary, prioritized_findings):
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         safe_target = str(target).replace('/', '_').replace('\\', '_').replace(':', '_').replace('?', '_').replace('&', '_')
-        filename = f'NEXUS-VAPT_Report_{safe_target}_{timestamp}.pdf'
+        filename = f'VULNSCOPE_Report_{safe_target}_{timestamp}.pdf'
         output_path = self.output_dir / filename
-        document = SimpleDocTemplate(str(output_path), pagesize=A4, rightMargin=15 * mm, leftMargin=15 * mm, topMargin=17 * mm, bottomMargin=18 * mm, title='NEXUS-VAPT Security Assessment Report', author='Hariom Singh - NEXUS-VAPT', subject='Automated Vulnerability Assessment Report')
+        document = SimpleDocTemplate(str(output_path), pagesize=A4, rightMargin=15 * mm, leftMargin=15 * mm, topMargin=17 * mm, bottomMargin=18 * mm, title='VULNSCOPE Security Assessment Report', author='Utsav Thakur - VULNSCOPE', subject='Automated Vulnerability Assessment Report')
         story = []
         story.append(Spacer(1, 20 * mm))
-        cover = Table([[Paragraph('NEXUS-VAPT', self.styles['NexusTitle'])]], colWidths=[180 * mm])
+        cover = Table([[Paragraph('VULNSCOPE', self.styles['NexusTitle'])]], colWidths=[180 * mm])
         cover.setStyle(TableStyle([('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#F2FAFD')), ('BOX', (0, 0), (-1, -1), 1.2, colors.HexColor('#00A8E8')), ('TOPPADDING', (0, 0), (-1, -1), 12), ('BOTTOMPADDING', (0, 0), (-1, -1), 5)]))
         story.append(cover)
         story.append(Paragraph('Security Assessment Report', self.styles['NexusTitle']))
         story.append(Paragraph(f'Target: {self._escape(target)}', self.styles['NexusSubtitle']))
         story.append(Paragraph(datetime.now().strftime('%d %B %Y, %H:%M:%S'), self.styles['NexusSubtitle']))
         story.append(Spacer(1, 8 * mm))
-        author_rows = [['Developed by', 'Hariom Singh'], ['Email', 'hariomsingh28453@gmail.com'], ['LinkedIn', 'linkedin.com/in/hariomsingh045/'], ['GitHub', 'github.com/hariomsingh045']]
+        author_rows = [['Developed by', 'Utsav Thakur'], ['Email', 'utsavthakur448@gmail.com'], ['LinkedIn', 'https://www.linkedin.com/in/utsavthakur123'], ['GitHub', 'https://www.linkedin.com/in/utsavthakur123']]
         author_table = self._info_table(author_rows, label_width=40 * mm)
         story.append(author_table)
         story.append(Spacer(1, 10 * mm))
