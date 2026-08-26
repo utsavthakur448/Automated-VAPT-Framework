@@ -2,7 +2,7 @@
 
 > **A modular Python-based Vulnerability Assessment & Penetration Testing framework for authorized security testing and controlled laboratory environments.**
 
-NEXUS-VAPT is a lightweight, modular **Vulnerability Assessment and Penetration Testing (VAPT)** framework written in Python.
+VULNSCOPE is a lightweight, modular **Vulnerability Assessment and Penetration Testing (VAPT)** framework written in Python.
 
 It combines:
 
@@ -23,7 +23,7 @@ into a single command-line assessment workflow.
 
 ## ⚠️ Legal & Ethical Use
 
-NEXUS-VAPT is designed for:
+VULNSCOPE is designed for:
 
 - Authorized penetration testing
 - Security research
@@ -43,7 +43,7 @@ The author is not responsible for misuse of this software.
 
 ## 🔎 Network Discovery
 
-NEXUS-VAPT uses **Nmap** for network and service discovery.
+VULNSCOPE uses **Nmap** for network and service discovery.
 
 Current capabilities include:
 
@@ -93,7 +93,7 @@ Findings can contain:
 
 # 🌐 Web Security Assessment
 
-NEXUS-VAPT includes lightweight web security checks designed for controlled security assessment.
+VULNSCOPE includes lightweight web security checks designed for controlled security assessment.
 
 ### Current checks
 
@@ -114,7 +114,7 @@ NEXUS-VAPT includes lightweight web security checks designed for controlled secu
 
 # 📊 Risk Prioritization
 
-NEXUS-VAPT combines severity and CVSS information to prioritize findings.
+VULNSCOPE combines severity and CVSS information to prioritize findings.
 
 | Severity | Priority |
 |---|---|
@@ -136,7 +136,7 @@ The framework also calculates:
 
 # 🧾 Evidence Collection
 
-NEXUS-VAPT can collect evidence associated with security findings.
+VULNSCOPE can collect evidence associated with security findings.
 
 Evidence may include:
 
@@ -205,7 +205,7 @@ Logging includes events such as:
 # 🏗️ Architecture
 
 ```text
-                         NEXUS-VAPT
+                   Automated VAPT FRAMEWORK
                               │
                               ▼
                      ┌─────────────────┐
@@ -258,7 +258,7 @@ Logging includes events such as:
 # 📁 Project Structure
 
 ```text
-NEXUS-VAPT/
+Automated-VAPT-Framework/
 │
 ├── config/
 │   └── default.json
@@ -364,38 +364,6 @@ NEXUS-VAPT/
 
 ---
 
-# 🛠️ Requirements
-
-### Software
-
-- Python 3
-- Nmap
-- pip
-- Linux recommended for the current implementation
-
-Python dependencies are listed in:
-
-```text
-requirements.txt
-```
-
-### Install Nmap
-
-For Kali/Debian-based systems:
-
-```bash
-sudo apt update
-sudo apt install nmap
-```
-
-Verify:
-
-```bash
-nmap --version
-```
-
----
-
 # 🚀 Installation
 
 ## 1. Clone the repository
@@ -427,12 +395,6 @@ pip install -r requirements.txt
 
 ```bash
 python3 vapt.py --help
-```
-
-And verify Nmap:
-
-```bash
-nmap --version
 ```
 
 ---
@@ -470,6 +432,38 @@ python3 vapt.py version
 ```
 
 > Only use targets that you own or have explicit authorization to assess.
+
+---
+
+# 🛠️ Requirements
+
+### Software
+
+- Python 3
+- Nmap
+- pip
+- Linux recommended for the current implementation
+
+Python dependencies are listed in:
+
+```text
+requirements.txt
+```
+
+### Install Nmap
+
+For Kali/Debian-based systems:
+
+```bash
+sudo apt update
+sudo apt install nmap
+```
+
+Verify:
+
+```bash
+nmap --version
+```
 
 ---
 
@@ -532,7 +526,7 @@ Example configuration areas:
 ```json
 {
     "project": {
-        "name": "NEXUS-VAPT",
+        "name": "VULNSCOPE",
         "version": "0.1.0"
     },
     "scan": {
@@ -570,7 +564,7 @@ Configuration can control:
 
 # 🎯 Scope & Target Validation
 
-NEXUS-VAPT supports validation for:
+VULNSCOPE supports validation for:
 
 - IPv4 addresses
 - IPv6 addresses
@@ -634,7 +628,7 @@ Generated reports and logs should normally remain local and should be excluded f
 
 # 📄 Sample PDF Report
 
-NEXUS-VAPT can generate structured security assessment reports containing:
+VULNSCOPE can generate structured security assessment reports containing:
 
 - Executive Summary
 - Target Information
@@ -652,7 +646,7 @@ NEXUS-VAPT can generate structured security assessment reports containing:
 
 A sanitized sample report generated from an authorized laboratory assessment:
 
-👉 **[View / Download NEXUS-VAPT Sample PDF Report](docs/NEXUS-VAPT-Sample-Report.pdf)**
+👉 **[View / Download VULNSCOPE Sample PDF Report](docs/sample-pdf-report/VULNSCOPE-Sample-Report.pdf)**
 
 > ⚠️ The published sample contains sanitized laboratory data. Never publish credentials, tokens, private IP information, or other sensitive assessment data.
 ---
@@ -663,7 +657,7 @@ Screenshots can be added here to demonstrate the framework running in a controll
 
 Recommended screenshots:
 
-![Screenshot](docs/screenshots/Screenshot%20From%202026-08-24%2006-53-51.png)
+![Screenshot](docs/sample-screenshots/Screenshot_2026-08-26_02_59_12.png)
 ![Screenshot](docs/screenshots/Screenshot%20From%202026-08-24%2006-54-28.png)
 ![Screenshot](docs/screenshots/Screenshot%20From%202026-08-24%2006-55-40.png)
 ![Screenshot](docs/screenshots/Screenshot%20From%202026-08-24%2006-56-16.png)
@@ -673,7 +667,7 @@ Recommended screenshots:
 
 # 🔐 Security Philosophy
 
-NEXUS-VAPT follows a staged security assessment model:
+VULNSCOPE follows a staged security assessment model:
 
 ```text
 Discover
@@ -701,7 +695,7 @@ This makes it suitable for:
 
 # ⚠️ Current Limitations
 
-NEXUS-VAPT `0.1.0` is an **early-stage VAPT framework** and should not be considered a replacement for mature commercial or open-source security assessment platforms.
+VULNSCOPE `0.1.0` is an **early-stage VAPT framework** and should not be considered a replacement for mature commercial or open-source security assessment platforms.
 
 Current limitations include:
 
@@ -720,18 +714,6 @@ Current limitations include:
 > **Always validate important findings before treating them as confirmed vulnerabilities.**
 
 ---
-
-# 🧪 Project Testing
-
-NEXUS-VAPT is designed to be tested in controlled environments such as:
-
-- Metasploitable 2
-- Local virtual machines
-- Local web applications
-- HTTP/HTTPS laboratory targets
-- OWASP training applications
-
-A deliberately vulnerable laboratory target is recommended for regression testing because it provides predictable services and vulnerability conditions.
 
 ---
 
@@ -759,18 +741,6 @@ Future improvements may include:
 
 ---
 
-# 💻 Technology Stack
-
-| Technology | Purpose |
-|---|---|
-| Python | Core framework |
-| Nmap | Network/service discovery |
-| Requests | HTTP communication |
-| Rich | Terminal interface |
-| ReportLab | PDF report generation |
-| CVE/CVSS data | Vulnerability correlation |
-| Git/GitHub | Version control |
-
 ---
 
 # 📚 Learning Objectives
@@ -796,37 +766,16 @@ This project was developed to explore practical cybersecurity concepts including
 ## Hariom Singh
 
 **Cybersecurity / VAPT Project**
-
-- GitHub: https://github.com/hariomsingh045
-- LinkedIn: https://www.linkedin.com/in/hariomsingh045/
-
----
-
-# 📄 License
-
-Choose and add an appropriate open-source license before distributing this project.
-
-If you have not selected a license yet, leave this section unchanged until you decide how you want others to use, modify, and redistribute the project.
+- Email id: utsavthakur448@gmail.com
+- GitHub: https://github.com/utsavthakur448
+- LinkedIn: https://www.linkedin.com/in/utsavthakur123
 
 ---
-
-# ⭐ Disclaimer
-
-NEXUS-VAPT is provided for:
-
-- Educational purposes
-- Security research
-- Authorized security assessments
-- Controlled laboratory environments
-
-The author is not responsible for misuse of this software or for unauthorized scanning, testing, exploitation, or assessment of systems, networks, applications, or infrastructure.
-
-**Always obtain explicit authorization before performing security testing.**
 
 ---
 
 ## ⭐ If you find this project useful
 
-If NEXUS-VAPT helps you learn about vulnerability assessment or cybersecurity tooling, consider giving the repository a ⭐ on GitHub.
+If VULNSCOPE helps you learn about vulnerability assessment or cybersecurity tooling, consider giving the repository a ⭐ on GitHub.
 
 **Built for learning. Built for security. Built for authorized testing.**
