@@ -1,0 +1,6 @@
+pydantic
+typer
+rich
+python-nmap
+reportlab
+requests
